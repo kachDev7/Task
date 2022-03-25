@@ -1,0 +1,93 @@
+/* Css File */
+
+/* Sets Universal font family for all the elements in the body Node */
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* The wild card " * "  selects all the elements in our project and subject them totally to our styling w
+without any pre-styled effect from Html*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Universal border */
+.rapb{
+    border: 1px solid black;
+}
+
+/* Styles the containing Div */
+.container{
+    padding: 20px;
+}
+
+/* This is for the Header  */
+.header{
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* This is for the Div Containing the boxes */
+.box-container{
+    padding: 20px;
+}
+
+/* Styles the menu items */
+
+.bt1{
+    background-color: rgb(255, 140, 140);
+}
+.bt2{
+    background-color: rgb(199, 19, 19);
+    color: white;
+}
+.bt3{
+    background-color: rgb(241, 241, 26);
+}
+
+.box-title{
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    float: right;
+}
+/* Styles the boxes' body */
+.box{
+    
+    padding-left: 10px;
+    margin: 10px;
+    background-color: gray;
+}
+/* Pushes down the dummy text, haven floated the menu item right */
+.box p{
+    clear: both;
+}
+
+/* RESPONSIVENESS */
+
+ /* For Tablets
+
+ This code will not be effective on device screen below 768px
+*/
+@media (min-width: 768px) {
+    .box-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .b3{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}
+
+/* For Desktop
+
+Only comes to play the device screen is above 992px
+*/
+@media (min-width: 992px){
+    .b3{
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+}
